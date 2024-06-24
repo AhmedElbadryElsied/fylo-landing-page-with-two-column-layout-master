@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark-blue:hsl(243, 87%, 12%);
+    --desaturated-blue:hsl(238, 22%, 44%);
+    --Bright-Blue:hsl(224, 93%, 58%);
+    --Cyan: hsl(170, 45%, 43%);
+    --Light-Gray-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+h1,h2,h3,h4{
+    font-family: "Raleway", sans-serif;
+
+}
+.container{
+     margin: 0 5rem;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* Header Start  */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li a{
+    margin: 0 30px;
+    color: var(--dark-blue);
+    font-family: "Raleway", sans-serif;
+}
+#home .row ,
+#team .row ,
+#sign-in .row {
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    padding: 8rem 0;
+}
+#home .row img , 
+#team .row img {
+    max-width: 100%;
+}
+#home .row .col h1 ,
+#team .row .col h2{
+    font-size: 40px;
+    line-height: 1.4;
+}
+#home .row .col p ,
+#team .row .col p{
+    margin: 20px 0;
+}
+#home .row .col input{
+    padding: 10px 15px;
+    width: 300px;
+    margin-right: 15px;
+}
+#home .row .btn{
+    padding: 10px 40px;
+    background: var(--Bright-Blue);
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
+/* Header End */
+/* Team Start  */
+#team{
+    background: url(./images/bg-curve-desktop.svg) no-repeat center center/cover;
+}
+#team .row .col>p{
+    padding-right: 5rem;
+}
+#team .row .col a{
+    color: var(--Cyan);
+    border-bottom: solid 1px var(--Cyan);
+}
+#team .row .col .box{
+    background: #fff;
+    margin-top: 3rem;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+#team .row .col .box p{
+    font-size: 12px;
+    margin: 15px 0;
+    line-height: 1.7;
+}
+#team .row .col .box .avatar{
+    display: flex;
+    align-items: center;
+}
+#team .row .col .box .avatar img{
+    width: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+#team .row .col .box .avatar h3{
+    font-size: 12px;
+    font-weight: 700;
+}
+#team .row .col .box .avatar p{
+    font-size: 10px;
+    margin: 0;
+}
+
+
+/* Team End */
+/* Sign In Stert  */
+#sign-in{
+    background: var(--desaturated-blue);
+}
+#sign-in .row{
+    padding: 6rem 0;
+}
+#sign-in .row .col h2{
+    font-size: 32px;
+    color:var(--Light-Gray-Blue);
+    margin-bottom: 30px;
+
+}
+#sign-in .row .col p{
+    color: var(--Light-Gray);
+    margin-right: 7rem;
+}
+#sign-in .row .col-2 input{
+    display: block;
+    padding: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+}
+#sign-in .row .col-2 button{
+    padding: 15px 20px;
+    background: var(--Bright-Blue);
+    border: none;
+    color: #fff;
+    width: 300px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+/* Sign In End */
+/* Footer Start  */
+#footer{
+    background: var(--dark-blue);
+    color:var(--Light-Gray);
+    padding: 5rem 0;
+}
+#footer .row{
+    display: grid;
+    grid-template-columns: 2fr repeat(3,1fr);
+}
+#footer .logo-white{
+    margin-bottom: 1rem;
+}
+#footer .col-1 .col-info{
+    display: flex;
+    align-items: center;
+    margin: 14px 0;
+}
+#footer .col-1 .col-info img{
+    margin-right: 10px;
+}
+#footer .row li{
+    margin-bottom: 15px;
+
+}
+#footer .row li a{
+    color: var(--Light-Gray);
+}
+#footer .row .col-4 i{
+    border: 1px solid var(--Light-Gray);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px ;
+    text-align: center;
+    line-height: 2;
+    margin: 0 10px;
+
+} 
+
+
+/* Footer End */
+
+
+/* Tablet */
+
+@media (max-width:1000px) {
+
+    #home .row ,
+    #team .row ,
+    #sign-in .row {
+        grid-template-columns: 1fr;
+    } 
+    #home .row ,
+    #team .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }  
+#home .row .col h1 ,
+#home .row .col p ,
+#team .row .col h2,
+#sign-in .row .col h2,
+#sign-in .row .col p
+{
+    text-align: center;
+}
+#home .row .col input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#team{
+    background: url(./images/bg-curve-mobile.svg)center center/cover no-repeat;
+}
+#team .row .col h2{
+    margin-top: 2rem;
+    font-size: 28px;
+}
+.link{
+    text-align: center;
+}
+#team .row .col .box{
+    margin: 2rem auto 0;
+    width: 300px;
+    padding: 20px;
+}
+#sign-in .row .col p{
+    margin-right: 0;
+}
+#sign-in .row .col-2 input{
+    width: 100%;
+    margin: 30px auto 15px;
+}
+#sign-in .row .col-2 button{
+    margin: 0 auto 0;
+    width: 100%;
+    
+}
+#footer .row{
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+}
+#footer .row .col-4{
+    margin: auto;
+}
+
+
+}
+@media (max-width: 650px){
+    .logo{
+        width: 80px;
+    }
+    .container{
+        margin: 0 1rem;
+    }
+    #navbar ul li a{
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    #home .row .col h1{
+        font-size: 28px;
+        margin-top:2rem;
+    }
+
+}
